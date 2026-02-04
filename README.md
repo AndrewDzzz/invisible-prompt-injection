@@ -117,11 +117,7 @@ The injection was tested against the following frontier models and succeeded on 
 invisible-prompt-injection/
 ├── README.md                              ← You are here
 ├── poisoned/
-│   └── Readme.md                          ← V7: HTML comments + MD ref links ✅ WORKS
-├── tools/
-│   ├── scan.py                            ← Detect zero-width payloads in any file
-│   ├── encode.py                          ← Embed zero-width hidden messages
-│   └── decode.py                          ← Extract zero-width hidden messages
+│   └── Readme.md                          ← HTML comments + MD ref links ✅ WORKS
 └── LICENSE
 ```
 
