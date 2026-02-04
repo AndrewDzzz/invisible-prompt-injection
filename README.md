@@ -1,6 +1,6 @@
 # Invisible Prompt Injection
 
-This repository documents a progressive security research effort testing how invisible content in documentation can manipulate AI-generated code. The research covers two fundamentally different steganography techniques, their effectiveness against frontier models (Claude, GPT-4), and the implications for AI-powered development tools.
+This repository documents a progressive security research effort testing how invisible content in documentation can manipulate AI-generated code. The research covers a steganography technique, its effectiveness against frontier models (Claude, GPT-4), and the implications for AI-powered development tools.
 
 > ⚠️ **Security research for defensive purposes.** All package names, domains, credentials, and endpoints are fictional. No malicious infrastructure exists. Published by [Bountyy Oy](https://bountyy.fi), a Finnish cybersecurity consultancy.
 
