@@ -18,10 +18,11 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Run README Injection Scan
-        uses: bountyyfi/invisible-prompt-injection@v1
+      - uses: actions/setup-python@v5
         with:
-          path: '.'
-          recursive: 'true'
-          fail-on: 'critical'
-          # exclude: 'test/fixtures,examples'  # optional
+          python-version: '3.11'
+
+      - name: Run README Injection Scan
+        run: python3 injection_scan.py . -r --fail-on critical
+        # env:
+        #   SCAN_EXCLUDE: 'test/fixtures,examples'

@@ -18,10 +18,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Run README Injection Scan
-        uses: ./
+      - uses: actions/setup-python@v5
         with:
-          path: '.'
-          recursive: 'true'
-          fail-on: 'critical'
-          exclude: 'poisoned,drpt-test-set'
+          python-version: '3.11'
+
+      - name: Run README Injection Scan
+        run: python3 injection_scan.py . -r --fail-on critical --exclude poisoned,drpt-test-set

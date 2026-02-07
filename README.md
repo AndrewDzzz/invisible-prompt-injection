@@ -84,7 +84,6 @@ This is a preprocessing fix. One regex eliminates the primary attack vector. Ren
 invisible-prompt-injection/
 ├── README.md                          ← You are here
 ├── SMAC.md                            ← Safe Markdown for AI Consumption standard
-├── action.yml                         ← GitHub Action definition
 ├── injection_scan.py                  ← Scanner (zero dependencies, reads env vars)
 ├── Dockerfile                         ← Container image for any CI platform
 ├── tools/
@@ -144,11 +143,11 @@ docker run --rm -v "$(pwd):/workspace" \
 ### GitHub Actions
 
 ```yaml
-- uses: bountyyfi/invisible-prompt-injection@v1
+- uses: actions/checkout@v4
+- uses: actions/setup-python@v5
   with:
-    path: '.'
-    recursive: 'true'
-    fail-on: 'critical'
+    python-version: '3.11'
+- run: python3 injection_scan.py . -r --fail-on critical
 ```
 
 ### GitLab CI
