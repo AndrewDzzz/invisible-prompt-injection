@@ -278,6 +278,10 @@ This research was disclosed to affected vendors prior to publication. The techni
 **Organization:** [Bountyy Oy](https://bountyy.fi), Finland
 **Contact:** [info@bountyy.fi](mailto:info@bountyy.fi)
 
+### Additional Task
+
+Add one to detect website markdown.
+
 ## License
 
 MIT © 2026 Bountyy Oy
